@@ -1,6 +1,7 @@
 ﻿var editorTest = {
     options: {},
-    init: function () {
+    init: function (options) {
+        $.extend(editorTest.options, {}, options);
         var items = asEditor.init();
         $.each(items, function (index, item) {
             var mode = item.options.mode;
