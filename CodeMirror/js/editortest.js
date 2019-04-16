@@ -1,4 +1,27 @@
 ﻿var editorTest = {
+    init: function () {
+        var items = asEditor.init();
+        $.each(items, function (index, item) {
+            var mode = item.options.mode;
+            if (mode === "text/x-mssql")
+                editorTest.setSQLValue(item);
+            else if (mode === "javascript")
+                editorTest.setJSValue(item);
+            else if (mode === "text/x-scss")
+                editorTest.setCSSValue(item);
+            else if (mode === "text/html")
+                editorTest.setHTMLValue(item);
+        });
+        $(".btnSet").on("click", function () {
+            var num = $(this).attr("data-num") - 1;
+            asEditor.setContent(items[num], "message " + (num + 1));
+        });
+        $(".Get").on("click", function () {
+            var num = $(this).attr("data-num") - 1;
+            var val = asEditor.getContent(items[num]);
+            alert(val);
+        });
+    },
     setSQLValue: function (myCodeMirror) {
          var value = "-- SQL Mode for CodeMirror\n" +
             "SELECT SQL_NO_CACHE DISTINCT\n" +
@@ -115,28 +138,5 @@
             "</body>\n" +
             "</html>\n";
         asEditor.setContent(myCodeMirrorHtml, valueHtml);
-    },
-    init() {
-        var items = asEditor.init();
-        $.each(items, function (index, item) {
-            var mode = item.options.mode;
-            if (mode === "text/x-mssql")
-                editorTest.setSQLValue(item);
-            else if (mode === "javascript")
-                editorTest.setJSValue(item);
-            else if (mode === "text/x-scss")
-                editorTest.setCSSValue(item);
-            else if (mode === "text/html")
-                editorTest.setHTMLValue(item);
-        });
-        $(".btnSet").on("click", function () {
-            var num = $(this).attr("data-num") - 1;
-             asEditor.setContent(items[num], "message " + (num + 1));
-        });
-        $(".Get").on("click", function () {
-            var num = $(this).attr("data-num") - 1;
-            var val = asEditor.getContent(items[num]);
-            alert(val);
-        });
     }
 }
