@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="codemirror-5.45.0/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror-5.45.0/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror-5.45.0/theme//ambiance.css">
+    <link rel="stylesheet" href="codemirror-5.45.0//theme/bespin.css">
+    <link rel="stylesheet" href="codemirror-5.45.0//theme/cobalt.css">
+    <link rel="stylesheet" href="codemirror-5.45.0//theme/darcula.css">
+    <script src="codemirror-5.45.0/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.45.0/mode/css/css.js"></script>
+    <script src="codemirror-5.45.0/mode/xml/xml.js"></script>
+    <script src="codemirror-5.45.0/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror-5.45.0/mode/sql/sql.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/aseditor.js"></script>
+    <script src="js/editortest.js"></script>
+
+    <script>
+        $(function () {
+            editorTest.init(
+                {}
+            );
+        });
+
+    </script>
+</head>
+<body>
+    <form>
+        <span>Editor1</span>
+        <textarea id="text1" class="as-codeEditor" data-type="SQL" data-theme="ambience"> var my = new Object()</textarea>
+        <input type="button" class="btnSet" data-num="1" value="setValue" />
+        <input type="button" class="Get"value="getValue" data-num="1" />
+        <br/>
+        <span>Editor2</span>
+        <textarea id="text2" class="as-codeEditor" data-type="HTML" data-theme="bespin"> var my = new Object()</textarea>
+        <input type="button" class="btnSet" data-num="2" value="setValue" />
+        <input type="button" class="Get" value="getValue" data-num="2" />
+        <br />
+        <span>Editor3</span>
+        <textarea id="text3" class="as-codeEditor" data-type="CSS" data-theme="cobalt"> var my = new Object()</textarea>
+        <input type="button" class="btnSet" data-num="3" value="setValue" />
+        <input type="button" class="Get" value="getValue" data-num="3" />
+        <br />
+        <span>Editor4</span>
+        <textarea id="text4" class="as-codeEditor" data-type="JS" data-theme="darcula"> var my = new Object()</textarea>
+        <input type="button" class="btnSet" data-num="4" value="setValue" />
+        <input type="button" class="Get" value="getValue" data-num="4" />
+    </form>
+</body>
+</html>
