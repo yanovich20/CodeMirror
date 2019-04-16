@@ -24,10 +24,11 @@ namespace CodeMirror
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseFileServer();
 
             app.Run(async (context) =>
             {
-               // await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Hello World!");
             });
         }
     }
