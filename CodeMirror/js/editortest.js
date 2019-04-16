@@ -1,4 +1,5 @@
 ﻿var editorTest = {
+    options: {},
     init: function () {
         var items = asEditor.init();
         $.each(items, function (index, item) {

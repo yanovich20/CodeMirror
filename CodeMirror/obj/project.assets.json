@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_5\\CodeMirror\\CodeMirror.csproj",
+      "projectUniqueName": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_7\\CodeMirror\\CodeMirror.csproj",
       "projectName": "CodeMirror",
-      "projectPath": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_5\\CodeMirror\\CodeMirror.csproj",
+      "projectPath": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_7\\CodeMirror\\CodeMirror.csproj",
       "packagesPath": "C:\\Users\\yanov\\.nuget\\packages\\",
-      "outputPath": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_5\\CodeMirror\\obj\\",
+      "outputPath": "D:\\абавязак\\work\\study\\RudenSoft\\CodeMirror\\CodeMirror5_7\\CodeMirror\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
