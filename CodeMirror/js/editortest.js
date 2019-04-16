@@ -123,7 +123,7 @@
             if (mode === "text/x-mssql")
                 editorTest.setSQLValue(item);
             else if (mode === "javascript")
-                edtorTest.setJSValue(item);
+                editorTest.setJSValue(item);
             else if (mode === "text/x-scss")
                 editorTest.setCSSValue(item);
             else if (mode === "text/html")
