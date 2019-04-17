@@ -1,17 +1,18 @@
-﻿var asEditor = {
+﻿var as = as || {};
+as.editor = {
     options: {
     },
     items: [],
     init: function (options) {
-        $.extend(asEditor.options, {}, options);
+        $.extend(as.editor.options, {}, options);
         $(".as-codeEditor").each(function (index, item) {
-            asEditor.initOneEditor(item);
+            as.editor.initOneEditor(item);
         });
-        return asEditor.items;
+        return as.editor.items;
     },
     initOneEditor: function (item) {
-        var editor = asEditor.initEditor(item);
-        asEditor.items.push(editor);
+        var editor = as.editor.initEditor(item);
+        as.editor.items.push(editor);
     },
     initEditor: function (dataItem) {
         var item = $(dataItem);

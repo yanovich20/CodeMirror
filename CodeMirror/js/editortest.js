@@ -2,7 +2,7 @@
     options: {},
     init: function (options) {
         $.extend(editorTest.options, {}, options);
-        var items = asEditor.init();
+        var items = as.editor.init();
         $.each(items, function (index, item) {
             var mode = item.options.mode;
             if (mode === "text/x-mssql")
@@ -16,11 +16,11 @@
         });
         $(".btnSet").on("click", function () {
             var num = $(this).attr("data-num") - 1;
-            asEditor.setContent(items[num], "message " + (num + 1));
+            as.editor.setContent(items[num], "message " + (num + 1));
         });
         $(".Get").on("click", function () {
             var num = $(this).attr("data-num") - 1;
-            var val = asEditor.getContent(items[num]);
+            var val = as.editor.getContent(items[num]);
             alert(val);
         });
     },
@@ -39,7 +39,7 @@
             "/* multiline\n" +
             "comment! */\n" +
             "LIMIT 1 OFFSET 0;\n";
-        asEditor.setContent(myCodeMirror, value);
+        as.editor.setContent(myCodeMirror, value);
     },
     setJSValue: function (myCodeMirrorJS) {
         valueJS = "function StringStream(string) {\n" +
@@ -67,7 +67,7 @@
             "},\n" +
             "backUp: function (n) { this.pos -= n; },\n" +
             "column: function () { return this.pos; },\n";
-        asEditor.setContent(myCodeMirrorJS, valueJS);
+        as.editor.setContent(myCodeMirrorJS, valueJS);
     },
     setCSSValue:function (myCodeMirrorCSS) {
         valueCSS = "@import \"compass/css3\"\n;" +
@@ -114,7 +114,7 @@
             "size: 1.2em;\n" +
             "}\n" +
             "}\n";
-        asEditor.setContent(myCodeMirrorCSS, valueCSS);
+        as.editor.setContent(myCodeMirrorCSS, valueCSS);
     },
     setHTMLValue:function(myCodeMirrorHtml) {
         valueHtml = "<html style=\"color: green\">\n" +
@@ -139,6 +139,6 @@
             "</script>\n" +
             "</body>\n" +
             "</html>\n";
-        asEditor.setContent(myCodeMirrorHtml, valueHtml);
+        as.editor.setContent(myCodeMirrorHtml, valueHtml);
     }
 }
