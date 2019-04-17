@@ -580,7 +580,7 @@
     <None Include="wwwroot\codemirror-5.45.0\theme\yonce.css" />
     <None Include="wwwroot\codemirror-5.45.0\theme\zenburn.css" />
     <None Include="wwwroot\CodeMirror.html" />
-    <None Include="wwwroot\js\aseditor.js" />
+    <None Include="wwwroot\js\as.editor.js" />
     <None Include="wwwroot\js\editortest.js" />
     <None Include="wwwroot\js\jquery-3.3.1.js" />
   </ItemGroup>
