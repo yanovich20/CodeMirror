@@ -82,3 +82,17 @@ D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_3\CodeMirror\o
 D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_3\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.RazorTargetAssemblyInfo.cache
 D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_3\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.dll
 D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_3\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.pdb
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\bin\Debug\netcoreapp2.1\CodeMirror.deps.json
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\bin\Debug\netcoreapp2.1\CodeMirror.runtimeconfig.json
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\bin\Debug\netcoreapp2.1\CodeMirror.runtimeconfig.dev.json
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\bin\Debug\netcoreapp2.1\CodeMirror.dll
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\bin\Debug\netcoreapp2.1\CodeMirror.pdb
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.csprojAssemblyReference.cache
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.csproj.CoreCompileInputs.cache
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.RazorAssemblyInfo.cache
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.RazorAssemblyInfo.cs
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.AssemblyInfoInputs.cache
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.AssemblyInfo.cs
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.RazorTargetAssemblyInfo.cache
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.dll
+D:\абавязак\work\study\RudenSoft\CodeMirror\CodeMirror5_7_5\CodeMirror\obj\Debug\netcoreapp2.1\CodeMirror.pdb
