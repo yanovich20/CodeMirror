@@ -6,13 +6,8 @@ as.editor = {
     init: function (options) {
         $.extend(as.editor.options, {}, options);
         $(".as-codeEditor").each(function (index, item) {
-            as.editor.initOneEditor(item);
+            as.editor.initEditor(item);
         });
-        return as.editor.items;
-    },
-    initOneEditor: function (item) {
-        var editor = as.editor.initEditor(item);
-        as.editor.items.push(editor);
     },
     initEditor: function (dataItem) {
         var item = $(dataItem);
@@ -29,17 +24,45 @@ as.editor = {
         else
             lang = langtemp;
         var theme = item.attr("data-theme");
+        var id = item.attr("id");
         var editor = CodeMirror.fromTextArea(item[0], {
             lineNumbers: true,
             mode: lang,
             theme: theme
         });
-        return editor;
+        var pair = { id: id, editor: editor };
+        as.editor.items.push(pair);
+        return;
     },
-    setContent: function (myCodeMirror, value) {
-        myCodeMirror.getDoc().setValue(value);
+    getEditorById: function (id) {
+        for (var k = 0; k < as.editor.items.length; k++)
+        {
+            if (as.editor.items[k].id == id)
+                return as.editor.items[k].editor;
+        }
     },
-    getContent: function (myCodeMirror) {
-        return myCodeMirror.getDoc().getValue();
+    setContent: function (id, value) {
+        var editor = as.editor.getEditorById(id);
+        if (editor)
+            editor.getDoc().setValue(value);
+        else
+            console.log("Error set id not found " + id);
+    },
+    getContent: function (id) {
+        var editor = as.editor.getEditorById(id);
+        if (editor)
+            return editor.getDoc().getValue();
+        else
+            console.log("Error get id not found " + id);
+    },
+    addEditor: function (id, lang, theme) {
+        var item = $("#" + id);
+        var editor = CodeMirror.fromTextArea(item[0], {
+            lineNumbers: true,
+            mode: lang,
+            theme: theme
+        });
+        var pair = { id: id, editor: editor };
+        as.editor.items.push(pair);
     }
 }

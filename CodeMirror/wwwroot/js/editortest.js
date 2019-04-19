@@ -2,29 +2,31 @@
     options:{},
     init: function (options) {
         $.extend(editorTest.options, {}, options);
-        var items = as.editor.init();
+        as.editor.init();
+        var items = as.editor.items;
         $.each(items, function (index, item) {
-            var mode = item.options.mode;
+            var mode = item.editor.options.mode;
             if (mode === "text/x-mssql")
-                editorTest.setSQLValue(item);
+                editorTest.setSQLValue(item.id);
             else if (mode === "javascript")
-                editorTest.setJSValue(item);
+                editorTest.setJSValue(item.id);
             else if (mode === "text/x-scss")
-                editorTest.setCSSValue(item);
+                editorTest.setCSSValue(item.id);
             else if (mode === "text/html")
-                editorTest.setHTMLValue(item);
+                editorTest.setHTMLValue(item.id);
         });
         $(".btnSet").on("click", function () {
-            var num = $(this).attr("data-num") - 1;
-            as.editor.setContent(items[num], "message " + (num + 1));
+            var prev = $(this).prev().prev();
+            var id = $(this).prev().prev().attr("id");
+            as.editor.setContent(id, "message " + id);
         });
-        $(".Get").on("click", function () {
-            var num = $(this).attr("data-num") - 1;
-            var val = as.editor.getContent(items[num]);
+        $(".btnGet").on("click", function () {
+            var id = $(this).prev().prev().prev().attr("id");
+            var val = as.editor.getContent(id);
             alert(val);
         });
     },
-    setSQLValue: function (myCodeMirror) {
+    setSQLValue: function (id) {
          var value = "-- SQL Mode for CodeMirror\n" +
             "SELECT SQL_NO_CACHE DISTINCT\n" +
             "@var1 AS `val1`, @'val2', @global.'sql_mode',\n" +
@@ -39,9 +41,9 @@
             "/* multiline\n" +
             "comment! */\n" +
             "LIMIT 1 OFFSET 0;\n";
-        as.editor.setContent(myCodeMirror, value);
+        as.editor.setContent(id, value);
     },
-    setJSValue: function (myCodeMirrorJS) {
+    setJSValue: function (id) {
         valueJS = "function StringStream(string) {\n" +
             "this.pos = 0;\n" +
             "this.string = string;\n" +
@@ -67,9 +69,9 @@
             "},\n" +
             "backUp: function (n) { this.pos -= n; },\n" +
             "column: function () { return this.pos; },\n";
-        as.editor.setContent(myCodeMirrorJS, valueJS);
+        as.editor.setContent(id, valueJS);
     },
-    setCSSValue:function (myCodeMirrorCSS) {
+    setCSSValue:function (id) {
         valueCSS = "@import \"compass/css3\"\n;" +
             "$variable: #333;" +
             "\n" +
@@ -114,9 +116,9 @@
             "size: 1.2em;\n" +
             "}\n" +
             "}\n";
-        as.editor.setContent(myCodeMirrorCSS, valueCSS);
+        as.editor.setContent(id, valueCSS);
     },
-    setHTMLValue:function(myCodeMirrorHtml) {
+    setHTMLValue:function(id) {
         valueHtml = "<html style=\"color: green\">\n" +
             "<!--this is a comment-->\n" +
             "<head>\n" +
@@ -139,6 +141,6 @@
             "</script>\n" +
             "</body>\n" +
             "</html>\n";
-        as.editor.setContent(myCodeMirrorHtml, valueHtml);
+        as.editor.setContent(id, valueHtml);
     }
 }
